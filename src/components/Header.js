@@ -93,12 +93,12 @@ const Logo = styled.h1`
     margin-bottom: 15px;
   }
 `;
-
 const NavLinks = styled.div`
   display: flex;
   gap: 15px;
   transition: all 0.3s ease;
   animation: ${fadeUp} 0.5s ease forwards;
+  position: relative;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -107,6 +107,10 @@ const NavLinks = styled.div`
     background-color: #0077b6;
     padding: 15px 0;
     display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+    position: absolute;
+    top: 60px; /* Adjust to your needs */
+    left: 0;
+    z-index: 10; /* Ensure it overlays the other content */
   }
 `;
 
